@@ -13,7 +13,7 @@
       return `
         <br>
         <br>
-        <a ${fc.setTrigger({on: 'href', url: 'home.fc'})} >Home</a>
+        <a ${fc.setTrigger({on: 'href', url: 'home'})} >Home</a>
         <br>
         <br>
         ${$this.url}  not found
