@@ -15,7 +15,7 @@ setInterval(() => {
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('sw1.js')
+    .register('sw.js')
     .then(() => { console.log('Service Worker Registered'); })
     .catch(e){alert(e)};
 }
