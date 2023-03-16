@@ -15,8 +15,9 @@ setInterval(() => {
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('sw.js')
-    .then(() => { console.log('Service Worker Registered'); });
+    .register('sw1.js')
+    .then(() => { console.log('Service Worker Registered'); })
+    .catch(e){alert(e)};
 }
 
 // Code to handle install prompt on desktop
@@ -26,7 +27,7 @@ const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
-    alert(88)
+    
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
