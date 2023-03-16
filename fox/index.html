@@ -14,7 +14,35 @@
 <hr>
 <br><br><br>
 <H1>FEZCAP</H1>
+    <h1>Sharing Fezcap</h1>
 
+    <p>We love MDN, and want to share it as far as we can! Click the following button to share MDN's home page using your system's native share functionality. See the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#Browser_compatibility">browsers this currently works on</a>.</p>
+
+    <p><button>Share MDN!</button></p>
+
+    <p class="result"></p>
+
+    <script>
+      let shareData = {
+        title: 'fezcap',
+        text: 'Learn web development on MDN!',
+        url: 'https://fezcap.github.io',
+      }
+
+      const btn = document.querySelector('button');
+      const resultPara = document.querySelector('.result');
+
+      btn.addEventListener('click', () => {
+        navigator.share(shareData)
+          .then(() =>
+            resultPara.textContent = 'MDN shared successfully'
+          )
+          .catch((e) =>
+            resultPara.textContent = 'Error: ' + e
+          )
+      });
+    </script>
+  
 
   </body>
 </html>
