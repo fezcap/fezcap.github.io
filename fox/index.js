@@ -6,7 +6,6 @@ function randomValueFromArray(array) {
   return array[randomNo];
 }
 
-alert('welcome first user. ')
 setInterval(() => {
   const randomChoice = randomValueFromArray(images);
   imgElem.src = `images/${randomChoice}.jpg`;
